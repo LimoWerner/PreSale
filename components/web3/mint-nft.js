@@ -135,6 +135,8 @@ const MintNFT = () => {
               description={'Free shit.'}
               canMint={giftClaimable}
               mintStatus={giftMintStatus}
+              showNumToMint={true}
+              setNumToMint={setNumToMint}
               action={onMintGift}
             />
           </Grid>
