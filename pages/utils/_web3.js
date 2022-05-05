@@ -30,9 +30,9 @@ export const walletlink = new WalletLinkConnector({
 
 export const mintGift = async (account, numberOfTokens, proof) => {
   console.log('minting gift...');
-  const amount = '0.00';
-    const amountToWei = web3.utils.toWei(amount, 'ether');
-  const result = sampleNFT.methods.mintGift(numberOfTokens,proof).send({ from: account,value: amountToWei }).then((result) => {
+  const amount2 = '0.00';
+    const amountToWei2 = web3.utils.toWei(amount, 'ether');
+  const result = sampleNFT.methods.mintGift(numberOfTokens,proof).send({ from: account,value: amountToWei2 }).then((result) => {
       return {
         success: true,
         status: `✅ Check out your transaction on Etherscan: https://etherscan.io/tx/` + result
