@@ -30,7 +30,7 @@ export const walletlink = new WalletLinkConnector({
 
 export const mintGift = async (account, numberOfTokens, proof) => {
   console.log('minting gift...');
-  const amount = (numberOfTokens * 0).toString();
+  const amount = '0.00';
     const amountToWei = web3.utils.toWei(amount, 'ether');
   const result = sampleNFT.methods.mintGift(numberOfTokens,proof).send({ from: account,value: amountToWei }).then((result) => {
       return {
