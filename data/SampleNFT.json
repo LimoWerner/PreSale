@@ -115,19 +115,6 @@
 	},
 	{
 		"inputs": [],
-		"name": "GIFT_SALE_PRICE",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "PUBLIC_SALE_PRICE",
 		"outputs": [
 			{
@@ -348,16 +335,11 @@
 				"internalType": "bytes32[]",
 				"name": "merkleProof",
 				"type": "bytes32[]"
-			},
-			{
-				"internalType": "uint256",
-				"name": "numberOfTokens",
-				"type": "uint256"
 			}
 		],
 		"name": "mintGift",
 		"outputs": [],
-		"stateMutability": "payable",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -419,11 +401,29 @@
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "publicMerkleRoot",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
 				"name": "numberOfTokens",
 				"type": "uint256"
+			},
+			{
+				"internalType": "bytes32[]",
+				"name": "merkleProof",
+				"type": "bytes32[]"
 			}
 		],
 		"name": "publicMint",
