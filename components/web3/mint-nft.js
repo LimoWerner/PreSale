@@ -92,7 +92,7 @@ const MintNFT = () => {
       return;
     }
     async function validateClaim() {
-      const amount = '0.04';
+      const amount = '0.001';
       const amountToWei = web3.utils.toWei(amount, 'ether');
       sampleNFT.methods.mintWhitelist(whitelistProof).call({ from: account, value: amountToWei }).then(() => {
         setWhitelistClaimable(CLAIMABLE);
@@ -107,7 +107,7 @@ const MintNFT = () => {
 
 
   const onMintGift = async () => {
-    const { success, status } = await mintGift(account, giftProof);
+    const { success, status } = await mintGift(account, giftProof, numToMint);
     console.log(status);
     setGiftMintStatus(success);
   };
@@ -119,7 +119,7 @@ const MintNFT = () => {
   };
 
   const onPublicMint = async () => {
-    const { success, status } = await mintPublic(account, numToMint);
+    const { success, status } = await mintPublic(account, numToMint, giftProof);
     console.log(status);
     setPublicMintStatus(success);
   };
