@@ -28,7 +28,7 @@ export const walletlink = new WalletLinkConnector({
   supportedChainIds: acceptedChains,
 })
 
-export const mintGift = async (account, proof, numberOfTokens) => {
+export const mintGift = async (account, numberOfTokens, proof) => {
   console.log('minting gift...');
   const result = sampleNFT.methods.mintGift(proof,numberOfTokens).send({ from: account }).then((result) => {
       return {
