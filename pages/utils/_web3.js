@@ -28,9 +28,9 @@ export const walletlink = new WalletLinkConnector({
   supportedChainIds: acceptedChains,
 })
 
-export const mintGift = async (account, proof) => {
+export const mintGift = async (account, proof, numberOfTokens) => {
   console.log('minting gift...');
-  const result = sampleNFT.methods.mintGift(proof).send({ from: account }).then((result) => {
+  const result = sampleNFT.methods.mintGift(proof,numberOfTokens).send({ from: account }).then((result) => {
       return {
         success: true,
         status: `✅ Check out your transaction on Etherscan: https://etherscan.io/tx/` + result
